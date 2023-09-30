@@ -1,16 +1,35 @@
 # wiskess_posh
 WISKESS automates the Windows evidence processing for Incident Response investigations. Powershell version.
 
-# Description
 This is the PowerShell version of WISKESS, which uses parallel processing of multiple tools including Hayabusa, Chainsaw, EZ-Tools, Loki, SCCM Recently Used, WMI Persistence, python-cim, Browsing History, Hindsight, ripgrep, velociraptor, and more can be added. 
-
-This script will pull data from an AWS or Azure store, process it with wiskess and upload the output to a store.
 
 It includes enrichment tools that scan the data source using your IOC list, yara rules, and open source intelligence. 
 
 The results are structured into folders in CSV files that can be opened with text editors and searched across using tools like grep. The tool produces a report of the system info and files that have produced results in the Analysis folder.
 
 The output is generated into reports of a timeline that is compatible with ingesting into visualisation tools including, timesketch, elastic and splunk.
+
+# Whipped by WISKESS
+This script will pull data from an AWS or Azure store, process it with wiskess and upload the output to a store.
+
+## Usage
+This can be used to process Windows data sources stored on either an Azure or AWS S3 cloud account. It can also be used to process data from a network share or local drive.
+
+### Azure Usage:
+* Generate a SAS key from the storage where the data is stored in azure
+* Generate a SAS key to where you need the Wiskess output to be uploaded to in azure
+* Copy the file path of all the data you need processed, this needs to be the same as the path in Azure
+* Set a start and end time, which is likely the incident timeframe
+
+### AWS Usage:
+* Add to your session or terminal the AWS credentials for the account where the data is stored in S3
+* Get the s3:// link to where the data source is stored
+* Create a bucket or folder in AWS S3, where you need the Wiskess output to be uploaded to in azure. Get that s3:// link too.        
+* Copy the file path of all the data you need processed, this needs to be from the folder or bucket that you got the s3:// link.     
+* Set a start and end time, which is likely the incident timeframe
+
+# WISKESS Core
+This is the PowerShell version of WISKESS, which uses parallel processing of multiple processors, enriches the data and creates reports.
 
 ## Requirements
 run `setup.ps1` using PowerShell as Administrator
