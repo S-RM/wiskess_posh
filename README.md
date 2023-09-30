@@ -28,7 +28,7 @@ This can be used to process Windows data sources stored on either an Azure or AW
 ### AWS Usage:
 * Add to your session or terminal the AWS credentials for the account where the data is stored in S3
 * Get the s3:// link to where the data source is stored
-* Create a bucket or folder in AWS S3, where you need the Wiskess output to be uploaded to in azure. Get that s3:// link too.        
+* Create a bucket or folder in AWS S3, where you need the Wiskess output to be uploaded to in AWS S3. Get that s3:// link too.        
 * Copy the file path of all the data you need processed, this needs to be from the folder or bucket that you got the s3:// link.     
 * Set a start and end time, which is likely the incident timeframe
 
