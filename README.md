@@ -1,6 +1,7 @@
 # wiskess_posh
 
-<div><img src=https://github.com/vividDuck/wiskess_posh/assets/122105925/2e407444-7a1a-48cb-8d1e-e4e130467a33" alt="Image"></div>
+![wiskess_logo](https://github.com/vividDuck/wiskess_posh/assets/122105925/27e9b4b3-0a7f-4efb-a844-2eda7a8a6385)
+
 WISKESS automates the Windows evidence processing for Incident Response investigations. Powershell version is a collection of scripts and modules.
 
 This is the PowerShell version of WISKESS, which uses parallel processing of multiple tools including Hayabusa, Chainsaw, EZ-Tools, Loki, SCCM Recently Used, WMI Persistence, python-cim, Browsing History, Hindsight, ripgrep, velociraptor, and more can be added. 
