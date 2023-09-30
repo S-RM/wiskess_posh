@@ -34,13 +34,14 @@ This can be used to process Windows data sources stored on either an Azure or AW
 
 ## Example
 ```
-whipped.ps1 -dataSourceList "image.vmdk, folder with collection, surge.zip, velociraptor_collection.7z" `
+whipped.ps1 -dataSourceList "image.vmdk, folder_with_collection/, surge.zip, velociraptor_collection.7z" `
         -local_storage x:
         -storageType azure
         -in_link "https://myaccount.file.core.windows.net/myclient/?sp=rl&st=...VWjgWTY8uc%3D&sr=s" `
         -out_link "https://myaccount.file.core.windows.net/internal-cache/myclient/?sp=rcwl&st=2023-04-21T20...2FZWEA%3D&sr=s" `
         -time_start 2023-01-01 `
         -time_end 2023-02-01
+        -ioc_file iocs.txt
 ```
 
 ## Parameters
