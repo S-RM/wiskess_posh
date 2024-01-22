@@ -18,7 +18,7 @@ function eventLogFun($artHash, $outDir, $toolPath, $clawsOut, $wiskessLog) {
             "outFile" = "hayabusa.csv"
             "outDir" = "$outDir"
             "funCall" = '{0}\hayabusa\hayabusa.exe' -f $toolPath
-            "funArgs" = 'csv-timeline -d "{1}" -o "{2}\{3}" -H "{2}\{4}" -p timesketch-verbose --ISO-8601' -f $toolPath, $artHash.winevt, "$outDir", "hayabusa.csv", "hayabusa.html"
+            "funArgs" = 'csv-timeline -d "{1}" -o "{2}\{3}" -H "{2}\{4}" -p timesketch-verbose --ISO-8601 -w' -f $toolPath, $artHash.winevt, "$outDir", "hayabusa.csv", "hayabusa.html"
             "timeout" = 1200
         }
         "evtxcmd" = @{
